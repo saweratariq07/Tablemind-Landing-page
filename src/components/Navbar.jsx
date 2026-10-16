@@ -69,6 +69,15 @@ export default function Navbar({ onBookDemo }) {
             href={DEMO_URL}
             target="_blank"
             rel="noopener noreferrer"
+<<<<<<< HEAD
+=======
+            className="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-espresso/80 hover:text-espresso transition-colors"
+          >
+            View Demo <ExternalLink size={14} />
+          </a>
+          <button
+            onClick={onBookDemo}
+>>>>>>> 839b0d83eaf3ab850a6f04a33a07b5975961998c
             className="inline-flex items-center gap-1.5 bg-terracotta hover:bg-terracotta-dark text-white text-[13.5px] font-semibold px-5 py-2.5 rounded-full transition-colors shadow-card"
           >
             View Demo <ExternalLink size={14} />
@@ -96,7 +105,20 @@ export default function Navbar({ onBookDemo }) {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setOpen(false)}
+<<<<<<< HEAD
             className="mt-3 inline-flex items-center justify-center gap-1.5 bg-terracotta text-white text-[14px] font-semibold px-5 py-3 rounded-full shadow-card"
+=======
+            className="mt-3 inline-flex items-center justify-center gap-1.5 border-2 border-espresso/15 text-espresso text-[14px] font-semibold px-5 py-3 rounded-full"
+          >
+            View Demo <ExternalLink size={14} />
+          </a>
+          <button
+            onClick={() => {
+              setOpen(false);
+              onBookDemo();
+            }}
+            className="mt-2 inline-flex items-center justify-center gap-1.5 bg-terracotta text-white text-[14px] font-semibold px-5 py-3 rounded-full shadow-card"
+>>>>>>> 839b0d83eaf3ab850a6f04a33a07b5975961998c
           >
             View Demo <ExternalLink size={14} />
           </a>
