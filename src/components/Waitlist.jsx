@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import { Users2, ArrowRight, CalendarCheck, CheckCircle2, Loader2 } from "lucide-react";
+import { Users2, ArrowRight, ExternalLink, CheckCircle2, Loader2 } from "lucide-react";
 import Reveal from "./Reveal";
 import { submitWaitlistSignup } from "../utils/contactForms";
 
+const DEMO_URL = "https://tablemind-demo.vercel.app/";
 const empty = { name: "", email: "", restaurant: "", location: "" };
 
 export default function Waitlist({ onBookDemo }) {
@@ -163,14 +164,16 @@ export default function Waitlist({ onBookDemo }) {
                 See TableMind in action
               </h3>
               <p className="text-white/70 text-[13px] mb-5 max-w-[360px] leading-relaxed">
-                Book a live demo and discover how TableMind can simplify your operations and grow your business.
+                Experience the live interactive prototype and discover how TableMind can simplify your operations.
               </p>
-              <button
-                onClick={onBookDemo}
+              <a
+                href={DEMO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-terracotta hover:bg-terracotta-light text-white font-semibold text-[13.5px] px-5 py-3 rounded-full transition-colors shadow-card"
               >
-                Book a Demo <CalendarCheck size={15} />
-              </button>
+                View Demo <ExternalLink size={15} />
+              </a>
             </div>
           </div>
         </Reveal>

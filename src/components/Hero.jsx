@@ -39,26 +39,20 @@ export default function Hero({ onBookDemo, onJoinWaitlist }) {
           </p>
 
           <div className="mt-6 sm:mt-7 flex flex-col min-[400px]:flex-row flex-wrap gap-3">
-            <button
-              onClick={onBookDemo}
+            <a
+              href={DEMO_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex w-full min-[400px]:w-auto items-center justify-center gap-2 bg-terracotta hover:bg-terracotta-dark text-white font-semibold text-[14px] px-6 py-3.5 rounded-full transition-colors shadow-card min-h-[48px]"
             >
-              Book a Demo <ArrowRight size={15} />
-            </button>
+              View Demo <ExternalLink size={15} />
+            </a>
             <button
               onClick={onJoinWaitlist}
               className="inline-flex w-full min-[400px]:w-auto items-center justify-center gap-2 border-2 border-terracotta text-terracotta hover:bg-terracotta-pale font-semibold text-[14px] px-6 py-3.5 rounded-full transition-colors bg-cream/60 min-h-[48px]"
             >
               Join the Waitlist
             </button>
-            <a
-              href={DEMO_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex w-full min-[400px]:w-auto items-center justify-center gap-2 bg-white border-2 border-espresso/15 text-espresso hover:bg-cream-dark font-semibold text-[14px] px-6 py-3.5 rounded-full transition-colors shadow-soft min-h-[48px]"
-            >
-              View Demo <ExternalLink size={15} />
-            </a>
           </div>
 
           <div className="mt-8 sm:mt-9 grid grid-cols-2 gap-3 sm:flex sm:flex-nowrap sm:items-center sm:gap-4">
